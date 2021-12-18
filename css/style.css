@@ -2,47 +2,52 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lexend", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "poppins", "Lexend", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 header {
   background-color: #f5f3ee;
 }
+/* logo */
 header img {
-  margin: 5px;
+  height: 20em;
 }
 header ul {
   display: flex;
   justify-content: space-evenly;
 }
+/* nav bar */
 header ul li {
   display: flex;
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 8px;
+  border-bottom: transparent solid 4px;
+  transition-duration: 0.5s;
 }
-/* nav bar */
+
 header ul li:hover {
-  border-bottom: olive solid 4px;
+  border-bottom: #d0947c solid 4px;
 }
 
-header ul li:link {
+header ul li:visited {
   border-bottom: peachpuff solid 4px;
+  color: #d0947c solid;
 }
-
+/* zoekbar en afbeelding*/
 main form {
   position: relative;
   display: flex;
   justify-content: center;
   background-color: #626262;
 }
-
+/* defenitiefoto */
 main form img {
   display: flex;
   height: 30vw;
 }
-
+/* zoekbar */
 main form input {
   position: absolute;
   top: 46%;
@@ -51,42 +56,44 @@ main form input {
   width: 300px;
   height: 3vw;
   border-radius: 10vw;
-  border-color: olive;
+  border-color: #d0947c;
   /* van: Daan Zwarthoed */
 }
+/* 'blog' */
 main h2 {
   position: relative;
   display: flex;
   justify-content: center;
   margin-top: 3em;
 }
-
+/* ul cards */
 main ul {
   flex-wrap: wrap;
   display: flex;
 }
-
+/* cards */
 main ul li {
   display: flex;
   justify-content: center;
   width: 50%;
   font-weight: bold;
 }
-
+/* cards link */
 main ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: peachpuff;
+  background-color: #efddb7;
   border-style: solid;
   border-color: white;
   border-radius: 10px;
   margin: 30px;
 }
-/* cards */
+/* hover cards */
 main ul li a:hover {
   border-style: solid;
-  border-color: olive;
+  border-color: #d0947c;
+  transition-duration: 0.5s;
 }
 
 main ul li a img {
@@ -103,7 +110,7 @@ main ul li a p {
   text-align: center;
   margin-bottom: 30px;
 }
-
+/* geen homepagina */
 main h1 {
   font-weight: bold;
 }
@@ -125,7 +132,7 @@ section img {
   height: 300px;
   width: auto;
 }
-
+/* 1. balk tekst en afbeelding */
 section {
   display: flex;
   flex-direction: row;
@@ -135,31 +142,56 @@ section {
   overflow: hidden;
 }
 
+/* footer */
 footer {
   display: flex;
   justify-content: end;
   justify-content: space-evenly;
-  background-color: rosybrown;
+  background-color: #a56953;
 }
-
-footer ul {
+/* icons sm */
+footer > nav ul {
   display: flex;
   justify-content: space-evenly;
 }
 
+/* geen puntjes bij icon */
 footer ul li {
   display: flex;
 }
-
+/* grootte icon */
 footer ul li img {
   height: 25px;
-  margin: 10px;
+  margin-top: 2em;
+  margin-left: 0.75em;
+  transition-duration: 0.2s;
 }
-
+/* hover icon*/
 footer ul li img:hover {
   height: 30px;
 }
-
-footer ul li p {
+/* 2021, contact, sm parent*/
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1px;
+  margin: 2em;
+}
+/* 2021, contact, sm */
+footer > ul li {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5em;
+  color: #fff;
+}
+/* nieuwsbrief etc*/
+footer p {
   align-items: flex-end;
+  margin: 2em;
+  color: #fff;
+}
+/* logo onderin */
+footer img {
+  height: 20em;
+  flex-direction: column;
 }
