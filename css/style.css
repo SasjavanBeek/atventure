@@ -7,11 +7,14 @@
 }
 
 header {
+  display: flex;
+  justify-content: center;
   background-color: #f5f3ee;
+  flex-direction: column;
 }
 /* logo */
 header img {
-  height: 20em;
+  height: 10em;
 }
 header ul {
   display: flex;
@@ -31,9 +34,9 @@ header ul li:hover {
   border-bottom: #d0947c solid 4px;
 }
 
-header ul li:visited {
-  border-bottom: peachpuff solid 4px;
-  color: #d0947c solid;
+header ul li a {
+  text-decoration: none;
+  color: #d0947c;
 }
 /* zoekbar en afbeelding*/
 main form {
@@ -59,12 +62,14 @@ main form input {
   border-color: #d0947c;
   /* van: Daan Zwarthoed */
 }
-/* 'blog' */
+/* quote */
 main h2 {
   position: relative;
   display: flex;
   justify-content: center;
   margin-top: 3em;
+  color: #d0947c;
+  font-style: normal;
 }
 /* ul cards */
 main ul {
@@ -88,6 +93,7 @@ main ul li a {
   border-color: white;
   border-radius: 10px;
   margin: 30px;
+  text-decoration: none;
 }
 /* hover cards */
 main ul li a:hover {
@@ -100,9 +106,13 @@ main ul li a img {
   height: 95%;
   width: 30vw;
   margin: 30px;
-  margin-top: 30px;
-
+  margin-top: 10px;
   border-radius: 1vw;
+}
+main ul li a:hover img {
+  opacity: 80%;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
 }
 
 main ul li a p {
@@ -111,6 +121,23 @@ main ul li a p {
   margin-bottom: 30px;
 }
 /* geen homepagina */
+main > article.how {
+  background-image: url("../images/fotosbovenin/how.png");
+}
+/* <!-- https://www.google.com/search?q=backpacker&rlz=1C5CHFA_enNL962NL962&sxsrf=AOaemvIvRVfLNlMUyh1ujMlA6FvoaOzyrw:1639822688219&source=lnms&tbm=isch&sa=X&ved=2ahUKEwimnM3Gj-30AhXDPOwKHRYSDKIQ_AUoAXoECAMQAw&biw=1152&bih=609&dpr=2#imgrc=VgRQZ5sK85Vv_M -->  */
+main > article.mustsee {
+  background-image: url("../images/fotosbovenin/mustsee.png");
+}
+main > article.flist {
+  background-image: url("../images/fotosbovenin/flist.png");
+}
+
+main > article {
+  background-size: cover;
+  height: 30em;
+  background-position: center;
+}
+
 main h1 {
   font-weight: bold;
 }
@@ -126,24 +153,30 @@ main h3 {
 main p {
   margin: 10px;
 }
-
-section img {
-  border-radius: 3vw;
-  height: 300px;
-  width: auto;
-}
 /* 1. balk tekst en afbeelding */
 section {
   display: flex;
   flex-direction: row;
   background-color: peachpuff;
-  border-radius: 3vw;
-  margin: 30px;
+  border-radius: 1vw;
+  margin: 2em;
   overflow: hidden;
+}
+
+section h2,
+h3,
+h4 {
+  color: #fff;
+}
+section img {
+  border-radius: 1vw;
+  height: 300px;
+  width: auto;
 }
 
 /* footer */
 footer {
+  position: relative;
   display: flex;
   justify-content: end;
   justify-content: space-evenly;
@@ -181,17 +214,33 @@ footer > ul {
 footer > ul li {
   display: flex;
   justify-content: flex-end;
-  margin: 0.5em;
+  margin: 1em;
   color: #fff;
 }
 /* nieuwsbrief etc*/
-footer p {
+footer > a p {
   align-items: flex-end;
   margin: 2em;
   color: #fff;
 }
+/* geen lijn onder nieuwsbrief etc */
+footer > a {
+  text-decoration: none;
+}
+
 /* logo onderin */
-footer img {
-  height: 20em;
-  flex-direction: column;
+footer > img {
+  height: 5em;
+  position: absolute;
+  top: 25%;
+  right: 3%;
+}
+
+/* tekst styling */
+
+strong {
+  font-style: bold;
+}
+em {
+  font-style: italic;
 }
