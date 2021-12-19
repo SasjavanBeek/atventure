@@ -6,20 +6,26 @@
     "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+/* achtergrondkleur, afbeelding midden */
 header {
   display: flex;
   justify-content: center;
   background-color: #f5f3ee;
   flex-direction: column;
 }
-/* logo */
-header img {
-  height: 10em;
-}
+
+/* lijst naast elkaar */
 header ul {
   display: flex;
   justify-content: space-evenly;
 }
+
+/* logo */
+header img {
+  height: 10em;
+  margin: 1em;
+}
+
 /* nav bar */
 header ul li {
   display: flex;
@@ -28,6 +34,8 @@ header ul li {
   margin-bottom: 8px;
   border-bottom: transparent solid 4px;
   transition-duration: 0.5s;
+  position: sticky;
+  top: 0;
 }
 
 header ul li:hover {
@@ -38,18 +46,22 @@ header ul li a {
   text-decoration: none;
   color: #d0947c;
 }
+
+/* END HEADER */
 /* zoekbar en afbeelding*/
 main form {
   position: relative;
   display: flex;
   justify-content: center;
-  background-color: #626262;
+  background-color: #1b1b1b;
 }
+
 /* defenitiefoto */
 main form img {
   display: flex;
   height: 30vw;
 }
+
 /* zoekbar */
 main form input {
   position: absolute;
@@ -62,28 +74,33 @@ main form input {
   border-color: #d0947c;
   /* van: Daan Zwarthoed */
 }
-/* quote */
+
+/* quote en 'blog'*/
 main h2 {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 3em;
+  margin: 1.75em;
   color: #d0947c;
-  font-style: normal;
+  font-style: italic;
 }
-/* ul cards */
+
+/* BEGIN CARDS */
+/* ul cards (2 op een rij) */
 main ul {
   flex-wrap: wrap;
   display: flex;
 }
-/* cards */
+
+/* cards (puntjes en center*/
 main ul li {
   display: flex;
   justify-content: center;
   width: 50%;
   font-weight: bold;
 }
-/* cards link */
+
+/* cards link (achtergrondkleur, fotoafmeting, tekst */
 main ul li a {
   display: flex;
   flex-direction: column;
@@ -94,7 +111,9 @@ main ul li a {
   border-radius: 10px;
   margin: 30px;
   text-decoration: none;
+  color: #9ab4a9;
 }
+
 /* hover cards */
 main ul li a:hover {
   border-style: solid;
@@ -102,79 +121,108 @@ main ul li a:hover {
   transition-duration: 0.5s;
 }
 
+/* foto grootte */
 main ul li a img {
   height: 95%;
   width: 30vw;
   margin: 30px;
   margin-top: 10px;
   border-radius: 1vw;
-}
-main ul li a:hover img {
-  opacity: 80%;
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
+  -webkit-filter: blur(0.5px);
+  filter: blur(0.5px);
+  opacity: 95%;
 }
 
+/* img hover */
+main ul li a:hover img {
+  opacity: 100%;
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+}
+
+/* card hoger, lager door tekst */
 main ul li a p {
-  font-size: 1em;
-  text-align: center;
   margin-bottom: 30px;
 }
-/* geen homepagina */
+
+/* END CARDS EN #HOME */
+
+/* title huidige pagina */
+main h1 {
+  color: #9ab4a9;
+  margin: 50px;
+  margin-left: 9em;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* achtergrond foto's */
 main > article.how {
   background-image: url("../images/fotosbovenin/how.png");
 }
-/* <!-- https://www.google.com/search?q=backpacker&rlz=1C5CHFA_enNL962NL962&sxsrf=AOaemvIvRVfLNlMUyh1ujMlA6FvoaOzyrw:1639822688219&source=lnms&tbm=isch&sa=X&ved=2ahUKEwimnM3Gj-30AhXDPOwKHRYSDKIQ_AUoAXoECAMQAw&biw=1152&bih=609&dpr=2#imgrc=VgRQZ5sK85Vv_M -->  */
+
 main > article.mustsee {
   background-image: url("../images/fotosbovenin/mustsee.png");
 }
+
 main > article.flist {
   background-image: url("../images/fotosbovenin/flist.png");
 }
 
+/* intro text */
 main > article {
   background-size: cover;
   height: 30em;
   background-position: center;
+  color: #fff;
 }
 
-main h1 {
+/* intro text title */
+main > article h3 {
+  margin-top: 4em;
+  margin-left: 15em;
+
   font-weight: bold;
 }
 
-main h2 {
-  font-style: italic;
+/* intro text text */
+main > article p {
+  margin-top: 2em;
+  margin-left: 15em;
+  margin-right: 15em;
 }
 
-main h3 {
-  margin: 30px;
-}
-
-main p {
-  margin: 10px;
-}
-/* 1. balk tekst en afbeelding */
+/* 1. balk teksttitel en afbeelding */
 section {
   display: flex;
   flex-direction: row;
-  background-color: peachpuff;
+  background-color: #cddad4c9;
   border-radius: 1vw;
   margin: 2em;
   overflow: hidden;
 }
 
-section h2,
-h3,
-h4 {
-  color: #fff;
+/* text in section */
+section > article > h3 {
+  margin-top: 2em;
+  margin-left: 4em;
+  color: #1b1b1b;
 }
+
+section > article > p {
+  margin: 2em;
+  color: #4b4b4b;
+  font-size: 0.3cm;
+}
+
+/* foto in section */
 section img {
   border-radius: 1vw;
   height: 300px;
   width: auto;
 }
 
-/* footer */
+/* FOOTER*/
 footer {
   position: relative;
   display: flex;
@@ -182,6 +230,7 @@ footer {
   justify-content: space-evenly;
   background-color: #a56953;
 }
+
 /* icons sm */
 footer > nav ul {
   display: flex;
@@ -192,17 +241,20 @@ footer > nav ul {
 footer ul li {
   display: flex;
 }
+
 /* grootte icon */
 footer ul li img {
   height: 25px;
-  margin-top: 2em;
+  margin-top: 3em;
   margin-left: 0.75em;
   transition-duration: 0.2s;
 }
+
 /* hover icon*/
 footer ul li img:hover {
   height: 30px;
 }
+
 /* 2021, contact, sm parent*/
 footer > ul {
   display: flex;
@@ -210,6 +262,7 @@ footer > ul {
   margin-top: 1px;
   margin: 2em;
 }
+
 /* 2021, contact, sm */
 footer > ul li {
   display: flex;
@@ -217,12 +270,18 @@ footer > ul li {
   margin: 1em;
   color: #fff;
 }
+
 /* nieuwsbrief etc*/
 footer > a p {
   align-items: flex-end;
   margin: 2em;
   color: #fff;
 }
+
+footer > a p:hover {
+  text-decoration: underline;
+}
+
 /* geen lijn onder nieuwsbrief etc */
 footer > a {
   text-decoration: none;
@@ -236,11 +295,22 @@ footer > img {
   right: 3%;
 }
 
-/* tekst styling */
-
-strong {
-  font-style: bold;
+/* inthemakingpage afbeeldingsgrootte */
+body > img {
+  height: auto;
+  width: 35em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  width: 50%;
 }
+
+/* tekst styling */
+strong {
+  font-weight: bold;
+}
+
 em {
   font-style: italic;
 }
